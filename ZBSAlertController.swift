@@ -32,22 +32,28 @@ class ZBSAlertController: UIAlertController {
     }
     
     // MARK: - Extension
-    static public func simple2OptionsAlertViewWith(name: String?,
+    static public func simple2optionsAlertViewWith(name: String?,
                                                   message: String?,
                                                   yesButtonName: String,
                                                   yesButtonAction: ZBSAction? = nil,
                                                   noButtonName: String,
                                                   noButtonAction: ZBSAction? = nil
                                                   )->ZBSAlertController {
-        return simpleOptionsAlertViewWith(name: name, message: message, buttons: ZBSButton(name: yesButtonName, action: yesButtonAction, style: .default), ZBSButton(name: noButtonName, action: noButtonAction, style: .cancel));
+        return simpleAlertViewWith(name: name, message: message, buttons: ZBSButton(name: yesButtonName, action: yesButtonAction, style: .default), ZBSButton(name: noButtonName, action: noButtonAction, style: .cancel));
     }
     
-    static public func simpleOptionsAlertViewWith(name: String?, message: String?, buttons: ZBSButton...)->ZBSAlertController  {
-        
-        let alertView = ZBSAlertController.init(title: name, message: message, preferredStyle: .alert);
-        
+    static public func simpleAlertViewWith(name: String?, message: String?, buttons: ZBSButton...)->ZBSAlertController  {
+        return alertControllerWith(name: name, message: message, style: .alert, buttons: buttons);
+    }
+    
+    static public func simpleActionSheetWith(name: String?, message: String?, buttons: ZBSButton...)->ZBSAlertController  {
+        return alertControllerWith(name: name, message: message, style: .actionSheet, buttons: buttons);
+    }
+    
+    static private func alertControllerWith(name: String?, message: String?, style: UIAlertController.Style, buttons: [ZBSButton])->ZBSAlertController  {
+        let alertView = ZBSAlertController.init(title: name, message: message, preferredStyle: style);
         for button in buttons {
-            let alertAction = UIAlertAction.init(title: button.name, style: .default, handler: button.action);
+            let alertAction = UIAlertAction.init(title: button.name, style: button.style, handler: button.action);
             alertView.addAction(alertAction);
         }
         return alertView;
