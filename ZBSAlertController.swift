@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias ZBSAction = (UIAlertAction)->Void
+public typealias ZBSAction = (UIAlertAction)->Void
 
 // MARK: - ZBSAction
 struct ZBSButton {
@@ -31,7 +31,7 @@ class ZBSAlertController: UIAlertController {
         super.viewDidLoad()
     }
     
-    // MARK: - Extension
+    // MARK: - Public
     static public func simple2optionsAlertViewWith(name: String?,
                                                   message: String?,
                                                   yesButtonName: String,
@@ -63,3 +63,13 @@ class ZBSAlertController: UIAlertController {
         controller.present(self, animated: animated, completion: completed);
     }
 }
+
+// MARK: - UIViewController
+extension UIViewController {
+    public func presentSimpleOptionsAlertViewWith(name: String?, message: String?, op1Name: String, op1Action: ZBSAction? = nil, op2Name: String, op2Action: ZBSAction? = nil) {
+        self.present(ZBSAlertController.simple2optionsAlertViewWith(name: name, message: message, yesButtonName: op1Name, yesButtonAction: op1Action, noButtonName: op2Name, noButtonAction: op2Action), animated: true, completion: nil);
+    }
+}
+
+
+

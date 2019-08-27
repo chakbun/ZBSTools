@@ -1,8 +1,8 @@
 ## ZBSTools 
 __Using Swift more conveniently, smoothly__
 
-#### *ZBSImagePickerManager 
-is encapsulation of UIImageUIImagePickerController ans UIImagePickerControllerDelegate. 
+#### * ZBSImagePickerManager 
+is encapsulation of UIImageUIImagePickerController ans UIImagePickerControllerDelegate.  
 You can get image from camera simply like this, 
 ```
 ZBSImagePickerManager.shared.launchImagePickerIn(controller: viewController, sourceType: .camera) { (image) in
@@ -11,5 +11,6 @@ ZBSImagePickerManager.shared.launchImagePickerIn(controller: viewController, sou
 ```
 > You must add NSCameraUsageDescription in info.plist if  you want to get image from camera;
 
-#### *ZBSAlertController
+#### * ZBSAlertController  
+subclass of UIAlertController, encapsulate some methods;
 
