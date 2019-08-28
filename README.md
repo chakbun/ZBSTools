@@ -12,5 +12,5 @@ ZBSImagePickerManager.shared.launchImagePickerIn(controller: viewController, sou
 > You must add NSCameraUsageDescription in info.plist if  you want to get image from camera;
 
 #### * ZBSAlertController  
-subclass of UIAlertController, encapsulate some methods;
+subclass of UIAlertController, encapsulate some methods; 
 
