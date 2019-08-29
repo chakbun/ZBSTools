@@ -19,6 +19,10 @@ class ZBSImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINaviga
     
     private var imagePickedBlock: ZBSImagePickerBlock?
     
+    public var popAtView: UIView?
+    
+    public var popStyle: UIModalPresentationStyle = .fullScreen;
+    
     override init() {
         self.imageController = UIImagePickerController.init()
         super.init()
@@ -35,6 +39,10 @@ class ZBSImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINaviga
         self.imageController.sourceType = sourceType
         if supportType(source: sourceType) {
             self.imagePickedBlock = handler
+            self.imageController.modalPresentationStyle = self.popStyle;
+            if UIDevice.current.userInterfaceIdiom == .pad && self.popStyle != .fullScreen, let barItem = self.popAtView {
+                self.imageController.popoverPresentationController?.barButtonItem = UIBarButtonItem.init(customView: barItem);
+            }
             controller.present(self.imageController, animated: true, completion: nil)
         }
     }
