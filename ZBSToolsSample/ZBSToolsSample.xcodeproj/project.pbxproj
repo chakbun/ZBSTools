@@ -14,6 +14,8 @@
 		DF29F5A82319627D009B3CBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF29F5A62319627D009B3CBC /* LaunchScreen.storyboard */; };
 		DF29F5B32319627D009B3CBC /* ZBSToolsSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F5B22319627D009B3CBC /* ZBSToolsSampleTests.swift */; };
 		DF29F5BE2319627D009B3CBC /* ZBSToolsSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F5BD2319627D009B3CBC /* ZBSToolsSampleUITests.swift */; };
+		DF29F5CE2319705A009B3CBC /* ZBSImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F5CC2319705A009B3CBC /* ZBSImagePickerManager.swift */; };
+		DF29F5CF2319705A009B3CBC /* ZBSAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F5CD2319705A009B3CBC /* ZBSAlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		DF29F5B92319627D009B3CBC /* ZBSToolsSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZBSToolsSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF29F5BD2319627D009B3CBC /* ZBSToolsSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZBSToolsSampleUITests.swift; sourceTree = "<group>"; };
 		DF29F5BF2319627D009B3CBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF29F5CC2319705A009B3CBC /* ZBSImagePickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSImagePickerManager.swift; sourceTree = "<group>"; };
+		DF29F5CD2319705A009B3CBC /* ZBSAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSAlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		DF29F59C23196279009B3CBC /* ZBSToolsSample */ = {
 			isa = PBXGroup;
 			children = (
+				DF29F5CB2319705A009B3CBC /* Sources */,
 				DF29F59D23196279009B3CBC /* AppDelegate.swift */,
 				DF29F59F23196279009B3CBC /* ViewController.swift */,
 				DF29F5A123196279009B3CBC /* Main.storyboard */,
@@ -123,6 +128,16 @@
 				DF29F5BF2319627D009B3CBC /* Info.plist */,
 			);
 			path = ZBSToolsSampleUITests;
+			sourceTree = "<group>";
+		};
+		DF29F5CB2319705A009B3CBC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DF29F5CC2319705A009B3CBC /* ZBSImagePickerManager.swift */,
+				DF29F5CD2319705A009B3CBC /* ZBSAlertController.swift */,
+			);
+			name = Sources;
+			path = ../../Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF29F5CE2319705A009B3CBC /* ZBSImagePickerManager.swift in Sources */,
 				DF29F5A023196279009B3CBC /* ViewController.swift in Sources */,
+				DF29F5CF2319705A009B3CBC /* ZBSAlertController.swift in Sources */,
 				DF29F59E23196279009B3CBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,7 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SU8WEJ4S57;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ZBSToolsSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -451,7 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SU8WEJ4S57;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ZBSToolsSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
