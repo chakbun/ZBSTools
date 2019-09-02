@@ -16,11 +16,11 @@ subclass of UIAlertController, make less code to present A simple alert view;
 You can present A alert view in your controller like this, 
 ```
 ZBSAlertController.simple2optionsAlertViewWith(name: "title", message: "message", yesButtonName: "Done", yesButtonAction: { (action) in
-    //Done action code
+    //TODO:do something for Done action
 }, noButtonName: "Cancel", noButtonAction: { (action) in
-    //Cancel action code
+    //TODO:do something for Cancel action
 }).presentedIn(self, animated: true) {
-    //present completed code
+    //TODO:do something when alert view has presented
 }
 ```
 
