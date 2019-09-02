@@ -49,8 +49,6 @@ class ZBSImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINaviga
     
     // MARK: - UIImagePickerControllerDelegate
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        print("ZBSImagePickerManager=> didFinishPickingMediaWithInfo")
-        
         weak var weakSelf = self
         self.imageController.dismiss(animated: true) {
             if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage, let completed = weakSelf!.imagePickedBlock {
@@ -60,7 +58,6 @@ class ZBSImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINaviga
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        print("ZBSImagePickerManager=> imagePickerControllerDidCancel")
         weak var weakSelf = self
 
         self.imageController.dismiss(animated: true) {

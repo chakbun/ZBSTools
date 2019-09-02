@@ -6,6 +6,7 @@ Pod::Spec.new do |s|
 
   s.description  = <<-DESC
                     Using Swift more conveniently, smoothly
+                    So far encapsulation of UIAlertController and UIImagePickerController
                    DESC
 
   s.homepage     = "https://github.com/chakbun"
