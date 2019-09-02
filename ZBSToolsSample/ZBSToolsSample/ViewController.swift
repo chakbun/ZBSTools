@@ -23,16 +23,6 @@ class ViewController: UIViewController {
         weak var weakSelf = self
         
         func loadImageFrom(_ source: ZBSImagePickerSource) {
-            
-            ZBSAlertController.simple2optionsAlertViewWith(name: "title", message: "message", yesButtonName: "Done", yesButtonAction: { (action) in
-                //Done action code
-            }, noButtonName: "Cancel", noButtonAction: { (action) in
-                //Cancel action code
-            }).presentedIn(self, animated: true) {
-                //present completed code
-            }
-            return
-            
             ZBSImagePickerManager.shared.launchImagePickerIn(controller: weakSelf!, sourceType: source, didCompleted: { (image) in
                 weakSelf?.previewImageView.image = image
             })
