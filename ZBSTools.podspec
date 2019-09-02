@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = "ZBSTools"
   s.version      = "0.0.1"
-  s.summary      = "Using Swift more conveniently, smoothly"
+  s.summary      = "easy to use UIAlertController and UIImagePickerController"
 
   s.description  = <<-DESC
                     Using Swift more conveniently, smoothly
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://github.com/chakbun"
 
-  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "Jaben" => "cheungjaben@hotmail.com" }
 
   s.platform     = :ios

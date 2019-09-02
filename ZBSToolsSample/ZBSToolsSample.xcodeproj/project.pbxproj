@@ -16,6 +16,9 @@
 		DF29F5BE2319627D009B3CBC /* ZBSToolsSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F5BD2319627D009B3CBC /* ZBSToolsSampleUITests.swift */; };
 		DF29F5CE2319705A009B3CBC /* ZBSImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F5CC2319705A009B3CBC /* ZBSImagePickerManager.swift */; };
 		DF29F5CF2319705A009B3CBC /* ZBSAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29F5CD2319705A009B3CBC /* ZBSAlertController.swift */; };
+		DF29F60B231D5A26009B3CBC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DF29F60A231D5A26009B3CBC /* README.md */; };
+		DF29F60D231D5D0D009B3CBC /* ZBSTools.podspec in Resources */ = {isa = PBXBuildFile; fileRef = DF29F60C231D5D0D009B3CBC /* ZBSTools.podspec */; };
+		DF29F60F231D5D1E009B3CBC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = DF29F60E231D5D1E009B3CBC /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		DF29F5BF2319627D009B3CBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF29F5CC2319705A009B3CBC /* ZBSImagePickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSImagePickerManager.swift; sourceTree = "<group>"; };
 		DF29F5CD2319705A009B3CBC /* ZBSAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSAlertController.swift; sourceTree = "<group>"; };
+		DF29F60A231D5A26009B3CBC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		DF29F60C231D5D0D009B3CBC /* ZBSTools.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ZBSTools.podspec; path = ../../ZBSTools.podspec; sourceTree = "<group>"; };
+		DF29F60E231D5D1E009B3CBC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,9 @@
 		DF29F59C23196279009B3CBC /* ZBSToolsSample */ = {
 			isa = PBXGroup;
 			children = (
+				DF29F60E231D5D1E009B3CBC /* LICENSE */,
+				DF29F60C231D5D0D009B3CBC /* ZBSTools.podspec */,
+				DF29F60A231D5A26009B3CBC /* README.md */,
 				DF29F5CB2319705A009B3CBC /* Sources */,
 				DF29F59D23196279009B3CBC /* AppDelegate.swift */,
 				DF29F59F23196279009B3CBC /* ViewController.swift */,
@@ -244,8 +253,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF29F60F231D5D1E009B3CBC /* LICENSE in Resources */,
+				DF29F60D231D5D0D009B3CBC /* ZBSTools.podspec in Resources */,
 				DF29F5A82319627D009B3CBC /* LaunchScreen.storyboard in Resources */,
 				DF29F5A52319627D009B3CBC /* Assets.xcassets in Resources */,
+				DF29F60B231D5A26009B3CBC /* README.md in Resources */,
 				DF29F5A323196279009B3CBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
