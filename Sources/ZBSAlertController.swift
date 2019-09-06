@@ -23,7 +23,6 @@ public struct ZBSButton {
     }
 }
 
-
 // MARK: - ZBSAlertController
 class ZBSAlertController: UIAlertController {
 
@@ -46,10 +45,6 @@ class ZBSAlertController: UIAlertController {
         return alertControllerWith(name: name, message: message, style: .alert, buttons: buttons)
     }
     
-    static public func simpleActionSheetWith(name: String?, message: String?, buttons: ZBSButton...)->ZBSAlertController  {
-        return alertControllerWith(name: name, message: message, style: .actionSheet, buttons: buttons)
-    }
-    
     static fileprivate func alertControllerWith(name: String?, message: String?, style: UIAlertController.Style, buttons: [ZBSButton])->ZBSAlertController  {
         let alertView = ZBSAlertController.init(title: name, message: message, preferredStyle: style)
         for button in buttons {
@@ -64,6 +59,13 @@ class ZBSAlertController: UIAlertController {
     }
 }
 
+// MARK: - ActionSheet
+extension ZBSAlertController {
+    static public func simpleActionSheetWith(name: String?, message: String?, buttons: ZBSButton...)->ZBSAlertController  {
+        return alertControllerWith(name: name, message: message, style: .actionSheet, buttons: buttons)
+    }
+}
+
 // MARK: - UIViewController
 extension UIViewController {
     public func presentSimpleOptionsAlertViewWith(name: String?, message: String?, op1Name: String, op1Action: ZBSAction? = nil, op2Name: String, op2Action: ZBSAction? = nil) {
@@ -73,9 +75,6 @@ extension UIViewController {
     public func presentSimpleActionSheetWith(name: String?, message: String?, buttons: ZBSButton...) {
         self.present(ZBSAlertController.alertControllerWith(name: name, message: message, style: .actionSheet, buttons: buttons), animated: true, completion: nil)
     }
-    
-    
-    
 }
 
 

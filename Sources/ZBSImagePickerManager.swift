@@ -11,7 +11,7 @@ import UIKit
 typealias ZBSImagePickerSource = UIImagePickerController.SourceType
 typealias ZBSImagePickerBlock = (UIImage?)->Void
 
-class ZBSImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ZBSImagePickerManager: NSObject {
     
     static let shared: ZBSImagePickerManager = ZBSImagePickerManager()
     
@@ -46,8 +46,10 @@ class ZBSImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINaviga
             controller.present(self.imageController, animated: true, completion: nil)
         }
     }
-    
-    // MARK: - UIImagePickerControllerDelegate
+}
+
+// MARK: - UIImagePickerControllerDelegate
+extension ZBSImagePickerManager: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         weak var weakSelf = self
         self.imageController.dismiss(animated: true) {
@@ -59,11 +61,16 @@ class ZBSImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINaviga
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         weak var weakSelf = self
-
+        
         self.imageController.dismiss(animated: true) {
             if let completed = weakSelf!.imagePickedBlock {
                 completed(nil)
             }
         }
     }
+}
+
+// MARK: - UINavigationControllerDelegate
+extension ZBSImagePickerManager: UINavigationControllerDelegate {
+    
 }
