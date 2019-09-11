@@ -25,11 +25,9 @@ public struct ZBSButton {
 
 // MARK: - ZBSAlertController
 class ZBSAlertController: UIAlertController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
     // MARK: - Public
     static public func simple2optionsAlertViewWith(name: String?,
                                                   message: String?,

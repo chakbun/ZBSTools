@@ -24,11 +24,11 @@ ZBSAlertController.simple2optionsAlertViewWith(name: "title", message: "message"
 }
 ```
 
-### [CocoaPods][cocoapods]
+### Usage
+####  [CocoaPods][cocoapods]
 ```
 pod 'ZBSTools', '~> 0.0.2'
 ```
-
 
 [cocoapods]: https://cocoapods.org/
 

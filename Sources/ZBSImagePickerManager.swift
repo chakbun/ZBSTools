@@ -61,7 +61,6 @@ extension ZBSImagePickerManager: UIImagePickerControllerDelegate {
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         weak var weakSelf = self
-        
         self.imageController.dismiss(animated: true) {
             if let completed = weakSelf!.imagePickedBlock {
                 completed(nil)
