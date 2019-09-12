@@ -30,6 +30,10 @@ ZBSAlertController.simple2optionsAlertViewWith(name: "title", message: "message"
 pod 'ZBSTools', '~> 0.0.2'
 ```
 
+#### Manually 
+add all files of Sources to your project 
+
+
 [cocoapods]: https://cocoapods.org/
 
 
